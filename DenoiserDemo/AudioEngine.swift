@@ -47,6 +47,8 @@ class VBAudioEngine: ObservableObject {
             denoiser.process(buffer)
         })
         engine.avEngine.prepare()
+        
+        engine.output = mixer
     }
     
     func requestMicrophonePermission() {
